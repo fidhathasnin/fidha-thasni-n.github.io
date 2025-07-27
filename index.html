@@ -1,70 +1,46 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fidha Thasni N | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
-</head>
-<body class="bg-gray-100 text-gray-900 font-sans">
+  <script>
+    // Toggle dark mode from localStorage
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">Fidha Thasni N</h1>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Fidha</h1>
       <nav class="space-x-4">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <a href="index.html" class="text-blue-400 font-medium">Home</a>
+        <a href="about.html" class="hover:text-blue-400">About</a>
+        <a href="projects.html" class="hover:text-blue-400">Projects</a>
+        <a href="resume.html" class="hover:text-blue-400">Resume</a>
+        <a href="contact.html" class="hover:text-blue-400">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto p-6 space-y-20">
-
-    <!-- About -->
-    <section id="about" class="text-center mt-10">
-      <img src="assets/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto shadow mb-4" />
-      <h2 class="text-3xl font-semibold mb-2">Cybersecurity & AI Enthusiast</h2>
-      <p class="text-gray-700 max-w-xl mx-auto">
-        Final year B.Tech CSE student passionate about vulnerability analysis, intrusion detection systems, and AI-based security solutions.
-      </p>
+  <main class="max-w-5xl mx-auto p-6">
+    <section class="text-center my-20">
+      <h2 class="text-4xl font-bold mb-4">Hi, I'm Fidha 👋</h2>
+      <p class="text-lg text-gray-300">A B.Tech CSE student passionate about Cybersecurity, AI, and Web Development.</p>
+      <img src="assets/profile.jpg" alt="Profile" class="w-40 h-40 rounded-full mx-auto mt-6 shadow-lg">
     </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">PhishGuard</h3>
-          <p>A phishing URL detection system using Firebase, VirusTotal API, and Python Cloud Functions.</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">AI Intrusion Detection System</h3>
-          <p>Real-time anomaly detection using Isolation Forest and Autoencoders with a Flask web dashboard.</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Malware & Vulnerability Scanner</h3>
-          <p>Scans websites and files using tools like ClamAV, ZAP, Nikto, and VirusTotal API.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="text-center">
-      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-      <p class="mb-2">📧 <a href="mailto:fidha@example.com" class="text-blue-600">fidha@example.com</a></p>
-      <p class="mb-2">🔗 <a href="https://github.com/fidhathasnin" target="_blank" class="text-blue-600">GitHub</a></p>
-      <p>💼 <a href="https://www.linkedin.com/in/fidha-thasni-n/" target="_blank" class="text-blue-600">LinkedIn</a></p>
-    </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-500 text-sm">
-    © 2025 Fidha Thasni N. All rights reserved.
+  <footer class="text-center py-6 text-gray-400">
+    © 2025 Fidha Thasni N
   </footer>
-
 </body>
 </html>
